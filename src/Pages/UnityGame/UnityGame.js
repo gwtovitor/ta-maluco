@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from 'react';
 import { Unity, useUnityContext } from 'react-unity-webgl';
-import styles from './unityGame.module.scss'
+import styles from './unityGame.module.scss';
 import { useRef } from 'react';
 
 export default function UnityGame() {
@@ -39,10 +39,11 @@ export default function UnityGame() {
 		<div className={styles.loadingScreen}>
 			<div className={styles.loadingContent}>
 				<img
-					src="/cm.png"
+					src="/logo.png"
 					alt="Logo"
 					className={styles.loadingLogo}
 				/>
+				<span className={styles.games}>Games</span>
 				<div className={styles.loadingBarContainer}>
 					<div
 						className={styles.loadingBar}
@@ -100,7 +101,6 @@ export default function UnityGame() {
 	}, []);
 
 	//! End FullScreen Functions
-
 	return (
 		<div ref={containerRef} className={styles.container}>
 			{!isLoaded && renderLoading()}
