@@ -99,6 +99,22 @@ export default function UnityGame() {
 			window.removeEventListener('load', fixIOSFullscreen);
 		};
 	}, []);
+useEffect(() => {
+  const resizeCanvas = () => {
+    const canvas = document.querySelector('canvas');
+    if (canvas) {
+      canvas.style.height = `${window.innerHeight}px`;
+      canvas.style.width = `${window.innerWidth}px`;
+    }
+  };
+
+  window.addEventListener('resize', resizeCanvas);
+  resizeCanvas(); // forçar na primeira vez
+
+  return () => window.removeEventListener('resize', resizeCanvas);
+}, []);
+
+
 
 	//! End FullScreen Functions
 	return (
