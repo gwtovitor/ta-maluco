@@ -1,6 +1,8 @@
 .container {
+	margin: 0;
+	padding: 0;
+	height: 100dvh; // novo padrão ideal para dispositivos móveis
 	width: 100vw;
-	height: calc(var(--vh, 1vh) * 100); /* Corrige altura no iOS */
 	overflow: hidden;
 	display: flex;
 	flex-direction: column;

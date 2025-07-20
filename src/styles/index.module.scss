@@ -7,13 +7,7 @@ html,body{
 :global(html), 
 :global(body), 
 :global(#root), 
-.container {
-  margin: 0;
-  padding: 0;
-  height: 100dvh; // novo padrão ideal para dispositivos móveis
-  width: 100vw;
-  overflow: hidden;
-}
+
 :global(body) {
   overscroll-behavior: none;
   position: fixed;
