@@ -88,16 +88,16 @@ export default function UnityGame() {
 	};
 
 	useEffect(() => {
-		// document.addEventListener('click', enterFullscreen);
-		// document.addEventListener('touchstart', enterFullscreen);
-		// window.addEventListener('resize', fixIOSFullscreen);
-		// window.addEventListener('load', fixIOSFullscreen);
-		// return () => {
-		// 	document.removeEventListener('click', enterFullscreen);
-		// 	document.removeEventListener('touchstart', enterFullscreen);
-		// 	window.removeEventListener('resize', fixIOSFullscreen);
-		// 	window.removeEventListener('load', fixIOSFullscreen);
-		// };
+		document.addEventListener('click', enterFullscreen);
+		document.addEventListener('touchstart', enterFullscreen);
+		window.addEventListener('resize', fixIOSFullscreen);
+		window.addEventListener('load', fixIOSFullscreen);
+		return () => {
+			document.removeEventListener('click', enterFullscreen);
+			document.removeEventListener('touchstart', enterFullscreen);
+			window.removeEventListener('resize', fixIOSFullscreen);
+			window.removeEventListener('load', fixIOSFullscreen);
+		};
 	}, []);
 
 	//! End FullScreen Functions
