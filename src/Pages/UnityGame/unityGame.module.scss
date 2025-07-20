@@ -15,6 +15,14 @@
 		transform: translateY(-40vh);
 		transition: transform 0.3s ease;
 	}
+	@media (min-width: 600px) {
+		max-width: 430px; // largura máxima típica de celular grande
+		width: 100vw;
+		left: 50%;
+		transform: translateX(-50%);
+		border-radius: 24px;
+		box-shadow: 0 0 40px rgba(0,0,0,0.25);
+	}
 }
 
 .loadingScreen {
@@ -68,6 +76,14 @@
 	max-width: 100svw;
 	height: 100%;
 	image-rendering: pixelated;
+	@media (min-width: 600px) {
+		max-width: 430px; // largura máxima típica de celular grande
+		width: 100vw;
+		left: 50%;
+		transform: translateX(-50%);
+		border-radius: 24px;
+		box-shadow: 0 0 40px rgba(0,0,0,0.25);
+	}
 }
 .loadingText {
 	color: white;
