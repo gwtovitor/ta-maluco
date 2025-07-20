@@ -1,8 +1,6 @@
 .container {
-	margin: 0;
-	padding: 0;
-	height: 100dvh; // novo padrão ideal para dispositivos móveis
 	width: 100vw;
+	height: calc(var(--vh, 1vh) * 100); /* Corrige altura no iOS */
 	overflow: hidden;
 	display: flex;
 	flex-direction: column;
@@ -63,11 +61,12 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	align-self: center;
 	position: fixed;
 	top: 0;
-	left: 0;
-	width: 100vw;
-	height: 100%;
+	margin: 0 auto;
+	max-width: 100svw;
+	height: 100svh;
 	image-rendering: pixelated;
 }
 .loadingText {

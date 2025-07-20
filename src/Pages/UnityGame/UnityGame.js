@@ -54,7 +54,7 @@ export default function UnityGame() {
 		</div>
 	);
 
-	const { unityProvider, isLoaded, loadingProgression, sendMessage } =
+	const { unityProvider, isLoaded, loadingProgression } =
 		useUnityContext({
 			loaderUrl: '/unity-build/Build/tamaluco.loader.js',
 			dataUrl: '/unity-build/Build/tamaluco.data.unityweb',
@@ -88,33 +88,17 @@ export default function UnityGame() {
 	};
 
 	useEffect(() => {
-		document.addEventListener('click', enterFullscreen);
-		document.addEventListener('touchstart', enterFullscreen);
-		window.addEventListener('resize', fixIOSFullscreen);
-		window.addEventListener('load', fixIOSFullscreen);
-		return () => {
-			document.removeEventListener('click', enterFullscreen);
-			document.removeEventListener('touchstart', enterFullscreen);
-			window.removeEventListener('resize', fixIOSFullscreen);
-			window.removeEventListener('load', fixIOSFullscreen);
-		};
+		// document.addEventListener('click', enterFullscreen);
+		// document.addEventListener('touchstart', enterFullscreen);
+		// window.addEventListener('resize', fixIOSFullscreen);
+		// window.addEventListener('load', fixIOSFullscreen);
+		// return () => {
+		// 	document.removeEventListener('click', enterFullscreen);
+		// 	document.removeEventListener('touchstart', enterFullscreen);
+		// 	window.removeEventListener('resize', fixIOSFullscreen);
+		// 	window.removeEventListener('load', fixIOSFullscreen);
+		// };
 	}, []);
-useEffect(() => {
-  const resizeCanvas = () => {
-    const canvas = document.querySelector('canvas');
-    if (canvas) {
-      canvas.style.height = `${window.innerHeight}px`;
-      canvas.style.width = `${window.innerWidth}px`;
-    }
-  };
-
-  window.addEventListener('resize', resizeCanvas);
-  resizeCanvas(); // forçar na primeira vez
-
-  return () => window.removeEventListener('resize', resizeCanvas);
-}, []);
-
-
 
 	//! End FullScreen Functions
 	return (
